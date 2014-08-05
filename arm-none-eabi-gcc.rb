@@ -1,19 +1,16 @@
 require "formula"
 
-# Documentation: https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook
-#                /usr/local/Library/Contributions/example-formula.rb
-
 class ArmNoneEabiGcc < Formula
   homepage "https://gcc.gnu.org/"
   url "http://ftp.gnu.org/gnu/gcc/gcc-4.8.3/gcc-4.8.3.tar.bz2"
   sha1 "da0a2b9ec074f2bf624a34f3507f812ebb6e4dce"
 
-  #depends_on 'libiconv'
+  # OSX has old libiconv-1.11, maybe add: depends_on 'libiconv'
   depends_on 'gmp'
   depends_on 'libmpc'
   depends_on 'mpfr'
   depends_on 'arm-none-eabi-binutils'
-  
+
   def install
     target = 'arm-none-eabi'
 
@@ -31,7 +28,7 @@ class ArmNoneEabiGcc < Formula
       system "../configure", *args
       system "make all-gcc"
       system "make all-target-libgcc"
-      ENV.deparallelize
+      ## don't know if this is needed: ENV.deparallelize
       system "make install-gcc"
       system "make install-target-libgcc"
     end
