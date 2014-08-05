@@ -2,9 +2,9 @@ require 'formula'
 
 class ArmNoneEabiGcc < Formula
   homepage 'http://gcc.gnu.org/'
-  url 'http://ftpmirror.gnu.org/gcc/gcc-4.8.3/gcc-4.8.3.tar.bz2'
-  mirror 'ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.8.3/gcc-4.8.3.tar.bz2'
-  sha1 'da0a2b9ec074f2bf624a34f3507f812ebb6e4dce'
+  url 'http://ftpmirror.gnu.org/gcc/gcc-4.9.1/gcc-4.9.1.tar.bz2'
+  mirror 'ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.9.1/gcc-4.9.1.tar.bz2'
+  sha1 '3f303f403053f0ce79530dae832811ecef91197e'
 
   # OSX has old libiconv-1.11, maybe add: depends_on 'libiconv'
   depends_on 'gmp'
