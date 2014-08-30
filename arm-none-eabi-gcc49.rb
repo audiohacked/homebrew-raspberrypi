@@ -1,6 +1,6 @@
 require 'formula'
 
-class ArmNoneEabiGcc < Formula
+class ArmNoneEabiGcc49 < Formula
   homepage 'http://gcc.gnu.org/'
   url 'http://ftpmirror.gnu.org/gcc/gcc-4.9.1/gcc-4.9.1.tar.bz2'
   mirror 'ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.9.1/gcc-4.9.1.tar.bz2'
