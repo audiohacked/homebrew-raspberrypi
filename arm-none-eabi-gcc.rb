@@ -11,6 +11,7 @@ class ArmNoneEabiGcc < Formula
   depends_on 'libmpc'
   depends_on 'mpfr'
   depends_on 'arm-none-eabi-binutils'
+  depends_on 'newlib' => :optional
 
   def install
     target = 'arm-none-eabi'
@@ -22,8 +23,11 @@ class ArmNoneEabiGcc < Formula
       "--mandir=#{man}",
       "--disable-nls",
       "--enable-languages=c,c++",
-      "--without-headers"
+      "--without-headers",
+      "--enable-interwork"
     ]
+
+    if build.with? "newlib"
 
     mkdir 'build' do
       system "../configure", *args
