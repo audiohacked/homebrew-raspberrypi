@@ -27,7 +27,7 @@ class ArmNoneEabiGcc < Formula
       "--enable-interwork"
     ]
 
-    if build.with? "newlib"
+#    if build.with? "newlib"
 
     mkdir 'build' do
       system "../configure", *args
